@@ -21,8 +21,8 @@ del sistema especificada, pregunta si puede proceder a copiarlos en la carpeta d
       `'Abrir ventana de Power Shell aquí'`
       
   6. Para iniciar el programa, escribe en la ventana de Power Shell:
-```shell
- python .\sincronizar.py
-```
- ¡Listo! La póxima vez solo deberás presionar la tecla con la flecha hacia arriba de tu teclado y Power Shell
- volverá a escribir el último comando ejecutado ( > python .\sincronizar.py )
+      ```shell
+       python .\sincronizar.py
+      ```
+   ¡Listo! La póxima vez solo deberás presionar la tecla con la flecha hacia arriba de tu teclado y Power Shell
+   volverá a escribir el último comando ejecutado ( `python .\sincronizar.py` )
