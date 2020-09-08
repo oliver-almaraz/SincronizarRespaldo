@@ -38,7 +38,7 @@ def ls(directorio, dict):
     Añade a un diccionario la ruta absoluta de cada archivo en
     el directorio especificado con su timestamp como valor.
     """
-    for root, dirs, files in os.walk(directorio):
+    for root,dirs,files in os.walk(directorio):
         for filename in files:
             rutaAbsol = str(root+'\\'+filename).replace("\\ ", " ")
             if filename == "sincronizar.py":
@@ -69,9 +69,14 @@ def copiarRemplazar(dictio):
         separarNombreDeRuta = nombre.split("\\")
 	# Para crear las subcarpetas se quita el nombre del archivo de la ruta
         nombreSolo = str(separarNombreDeRuta[-1])
+    # Se crean las subcarpetas si no existen
         Path(relativePath.replace(nombreSolo,"")).mkdir(parents=True, exist_ok=True)
-	#se crean las subcarpetas si no existen
-        copyfile(ruta, relativePath)
+    # Ignora el archivo de configuración Desktop.ini que no se puede copiar.
+        if nombre.find("Desktop.ini") == -1:
+            try:
+                copyfile(ruta, relativePath)
+            except:
+                print("No se pudo copiar el archivo ",nombre)
 
 print()
 print("Importante: verifica que este programa esté en la carpeta que quieres usar como respaldo.")
