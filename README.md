@@ -10,14 +10,19 @@ del sistema especificada, pregunta si puede proceder a copiarlos en la carpeta d
 ## Para usarlo:
   1. Asegúrate de tener instalada una versión reciente de [Python](https://www.python.org/).
   2. [Descarga el código](https://github.com/oliver-almaraz/SincronizarRespaldo/archive/master.zip)
-    y extrae el archivo 'śincronizar.py' **en la carpeta que quieres usar como respaldo**.
-  3. Abre el archivo 'sincronizar.py' con el *Block de Notas* y edita la línea 16 con la ruta
+    y extrae el archivo *sincronizar.py* **en la carpeta que quieres usar como respaldo**.
+  3. Abre el archivo *sincronizar.py* con el *Block de Notas* y edita la línea 16 con la ruta
     **de la carpeta que quieres respaldar**.
   4. La primera vez, copia todos los archivos de la carpeta que quieres respaldar en la carpeta de respaldo.
   5. Cuando quieras actualizar tu carpeta de respaldo, abre una ventana de Power Shell en la **carpeta de respaldo**:
-    > Ctrl + Shift + Click Derecho (en un lugar vacío de la carpeta)
-    > "Abrir ventana de Power Shell aquí."
+  
+      `Ctrl + Shift + Click Derecho (en un lugar vacío de la carpeta)`
+      
+      `'Abrir ventana de Power Shell aquí'`
+      
   6. Para iniciar el programa, escribe en la ventana de Power Shell:
-    > python .\sincronizar.py
-    ¡Listo! La póxima vez solo deberás presionar la tecla con la flecha hacia arriba de tu teclado y Power Shell
-    volverá a escribir el último comando ejecutado ( > python .\sincronizar.py )
+```shell
+ python .\sincronizar.py
+```
+ ¡Listo! La póxima vez solo deberás presionar la tecla con la flecha hacia arriba de tu teclado y Power Shell
+ volverá a escribir el último comando ejecutado ( > python .\sincronizar.py )
