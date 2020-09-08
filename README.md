@@ -8,7 +8,7 @@ del sistema especificada, pregunta si puede proceder a copiarlos en la carpeta d
 **El script solo modifica la carpeta de respaldo y no elimina ningún archivo por seguridad.**
 
 ## Para usarlo:
-  1. Asegúrate de tener instalada una versión reciente de [Python](https://www.python.org/).
+  1. Descarga e instala el intérprete de [Python](https://www.python.org/) para Windows.
   2. [Descarga el código](https://github.com/oliver-almaraz/SincronizarRespaldo/archive/master.zip)
     y extrae el archivo *sincronizar.py* **en la carpeta que quieres usar como respaldo**.
   3. Abre el archivo *sincronizar.py* con el *Block de Notas* y edita la línea 16 con la ruta
