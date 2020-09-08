@@ -1,6 +1,6 @@
 # Actualiza una carpeta que es respaldo de otra carpeta
 
-###Script python para copiar en una carpeta de respaldo solo los archivos nuevos o modificados (Windows).
+### Script python para copiar en una carpeta de respaldo solo los archivos nuevos o modificados (Windows).
 
 Este programa compara los archivos en la carpeta en la que se encuentra con los de otra carpeta que se quiere
 respaldar. Si hay archivos nuevos o con una fecha de modificación más reciente en la carpeta
