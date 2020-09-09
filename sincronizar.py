@@ -48,12 +48,13 @@ def ls(directorio, dict):
                 modif = os.path.getmtime(rutaAbsol)
             except OSError:
                 try:
-# Si el archivo no ha sido modificado se muestra la fecha de creación
+            # Si el archivo no ha sido modificado se muestra la fecha de creación
                     modif = os.path.getctime(rutaAbsol)
                 except OSError:
-# Si aún así Windows no encuentra una fecha válida
+            # Si aún así Windows no encuentra una fecha válida
                     modif = 0
-# Cada archivo se almacena en un diccionario junto con su timestamp
+            # Cada archivo se almacena en un diccionario junto con su timestamp.
+            # (se guarda su ruta absoluta para evitar problemas con archivos homónimos)
             dict[rutaAbsol]=modif
 
 def copiarRemplazar(dictio):
@@ -64,12 +65,14 @@ def copiarRemplazar(dictio):
     las crea.
     """
     for ruta, nombre in dictio.items():
-        print("copiando '",nombre,"'")
+        print("Copiando ",nombre," ...")
+        # Se convierte la ruta absoluta en una relativa con respecto a la carpeta que
+        # será respaldada:
         relativePath = (str(ruta.replace(path,".")))
+	    # Para crear las subcarpetas se quita el nombre del archivo de la ruta:
         separarNombreDeRuta = nombre.split("\\")
-	# Para crear las subcarpetas se quita el nombre del archivo de la ruta
         nombreSolo = str(separarNombreDeRuta[-1])
-    # Se crean las subcarpetas si no existen
+        # Se crean las subcarpetas si no existen
         Path(relativePath.replace(nombreSolo,"")).mkdir(parents=True, exist_ok=True)
         try:
             copyfile(ruta, relativePath)
@@ -89,7 +92,6 @@ Abre este script ('sincronizar.py') con un editor de texto
 (como el Block de Notas) y actualiza la ruta en la línea 16.
 Si quieres salir, presiona simultáneamente Ctrl + c
 """)
-
 # Si el path en el script es correcto, de todos modos se confirma que sea el deseado
 else:
 	print("El directorio que quieres respaldar en esta carpeta está configurado como ", path)
